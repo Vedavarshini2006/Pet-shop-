@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  
+  button, a, .pet-card:hover {
+  cursor: url('https://cdn-icons-png.flaticon.com/32/616/616408.png') 16 16, pointer;
+}
+
+
+
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient( rgba(48, 0, 75, 0.7), 
+              rgba(10, 0, 20, 0.8)),
+              url('https://media.istockphoto.com/id/1417882544/photo/large-group-of-cats-and-dogs-looking-at-the-camera-on-blue-background.jpg?s=612x612&w=0&k=20&c=kGKANSIFdNfhBJMipyuaKU4BcVE1oELWev9lF2ickE0=') no-repeat center center fixed;
+  background-size: cover;
+
+  color: #f0e6f6;
+  line-height: 1.6;
+  padding-bottom: 50px;
+}
+
+header {
+  background: #1a012a;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #9a4ef2;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-family: 'Great Vibes', cursive;
+  color: #ebe8f1;
+  text-shadow: 1px 1px 4px #000;
+}
+
+nav a {
+  color: #ebe8f1;
+  margin: 0 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ba8aff;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2, h3 {
+  color:#ebe8f1;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about ul li::before {
+  content: '🌟';
+  margin-right: 8px;
+}
+
+.gallery img {
+  height: 150px;
+  border-radius: 12px;
+  border: 2px solid #722b9c;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 15px #36024d;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.pets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.pet-card {
+  background-color: #27003d;
+  border: 1px solid #a259ff;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px #4b0072;
+  transition: transform 0.3s ease;
+}
+
+.pet-card:hover {
+  transform: scale(1.02);
+}
+
+.pet-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+form input, form textarea {
+  padding: 12px;
+  background-color: #1c012d;
+  border: 1px solid #9949f5;
+  border-radius: 8px;
+  color: #ebe8f1;
+  font-size: 1rem;
+}
+
+form button {
+  background: linear-gradient(to right, #6e00b5, #b900d2);
+  border: none;
+  padding: 12px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+
+.clients table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+.clients th, .clients td {
+  border: 1px solid #572b86;
+  padding: 12px;
+  text-align: left;
+}
+
+.clients th {
+  background-color: #34024a;
+  color: #dfa3ff;
+}
+
+footer {
+  background-color: #1a012a;
+  padding: 15px;
+  text-align: center;
+  border-top: 2px solid #9a4ef2;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #caaeff;
+}
+/* 🌌 1. Animated Background - Starry Vibe */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.04;
+  z-index: -1;
+  animation: moveStars 60s linear infinite;
+}
+
+@keyframes moveStars {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+/* 🧊 2. Glassmorphism Pet Cards */
+.pet-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px #5e00b3;
+}
+
+/* 🎨 3. Gradient Text Headers */
+h2, h3 {
+  background: linear-gradient(to right, #ebe8f1, #9966ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Great Vibes', cursive;
+}
+
+/* ✨ 4. Floating Sparkles */
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+.sparkle {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #ffffff55;
+  border-radius: 50%;
+  animation: float 15s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Place random sparkles on load */
+body::after {
+  content: '';
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  z-index: 0;
+}
+
+/* 🐾 5. Wave Divider */
+.wave-divider {
+  margin-top: 50px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 80px;
+}
+
+/* Optional: Style footer on top of wave */
+footer {
+  background-color: #1a012a;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #9a4ef2;
+  color: #caaeff;
+}
